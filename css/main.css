@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --verylightblue: hsl(240, 78%, 98%);
+  --lightgrayblue: hsl(234, 14%, 74%);
+  --grayishblue: hsl(233, 13%, 49%);
+  --darkgrayishblue: hsl(232, 13%, 33%);
+}
+html {
+  font-size: 15px;
+  min-height: 100vh;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--verylightblue);
+  background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, bottom left;
+  background-size: 30% 75%, 30% 30%;
+}
+main {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+/* Font Weight */
+h1,
+h2,
+h3,
+h4,
+li,
+button {
+  font-weight: 700;
+}
+.pricing {
+  color: var(--grayishblue);
+  text-align: center;
+}
+/* Toggle Button Container  */
+.action {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action__content {
+  display: flex;
+  align-items: center;
+}
+/* Annually and Monthly Text */
+h3 {
+  display: inline;
+  margin: 0px 12px 0px 12px;
+  color: var(--lightgrayblue);
+}
+/* Card Container */
+.card_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+/* Basic and Master Card Styling */
+.card__basic,
+.card__master {
+  background: #ffffff;
+  border: 1px solid var(--verylightblue);
+  border-radius: 8px;
+  padding: 25px 0px 25px 0px;
+  width: 33.33%;
+  box-shadow: 0.2px 0.4px 0.6px var(--lightgrayblue);
+  margin: 15px 0px 15px 0px;
+}
+h4 {
+  color: var(--grayishblue);
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 20px 0px 20px 0px;
+}
+/* Card Value */
+.card__value {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--darkgrayishblue);
+  display: block;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+.card__value__currency {
+  margin: 35px 0px 35px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__value__currency h2 {
+  margin: 0px 0px 0px 8px;
+  font-size: 4.2rem;
+}
+.card__value span {
+  margin: 0;
+  font-size: 1.8rem;
+}
+/* Basic and Master Card Unordered List */
+.card__features {
+  list-style-type: none;
+  margin-top: 1rem;
+  color: var(--grayishblue);
+  text-align: center;
+  display: block;
+  margin: 40px 20px 20px 20px;
+  padding: 0;
+}
+.card__features li,
+.professional__card__features li {
+  border-bottom: 1px solid var(--lightgrayblue);
+  padding: 15px 0px 15px 0px;
+}
+.card__features li:nth-child(1),
+.professional__card__features li:nth-child(1) {
+  border-top: 1px solid var(--lightgrayblue);
+}
+/* Learn More Button for Basic and Master Card */
+.learnmore,
+.learnmore__professional {
+  outline: none;
+  background: linear-gradient(to left, hsl(237, 63%, 64%), hsl(236, 72%, 79%));
+  padding: 12px 0px 12px 0px;
+  width: 90%;
+  border: 1px solid var(--verylightblue);
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.learnmore:hover {
+  background: none;
+  border: 1px solid var(--grayishblue);
+  color: hsl(237, 63%, 64%);
+}
+
+/* Professional Card Styling */
+.card__professional {
+  background: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 33.33%;
+  border-radius: 8px;
+}
+.card__professional h4 {
+  color: #ffffff;
+  margin: 0;
+  margin-top: 60px;
+}
+.card__professional .card__value {
+  color: var(--verylightblue);
+}
+.professional__card__features {
+  list-style-type: none;
+  margin-top: 1rem;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  margin: 40px 20px 20px 20px;
+  padding: 0;
+}
+.learnmore__professional {
+  background: #ffffff;
+  color: hsl(237, 63%, 64%);
+}
+.learnmore__professional:hover {
+  background: none;
+  color: #ffffff;
+}
+
+/* Media Queries */
+/* For Smartphones and 
+Low resolution devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-size: 30% 50%, 30% 10%;
+  }
+  main {
+    width: 85%;
+  }
+  .pricing {
+    font-size: 1.8rem;
+  }
+  .action__content {
+    margin-top: 20px;
+  }
+  .action__content h3 {
+    font-size: 1rem;
+    margin: 0px 18px 0px 18px;
+  }
+  .card_container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+  .card__basic,
+  .card__master,
+  .card__professional {
+    width: 100%;
+  }
+  .card__basic,
+  .card__master {
+    margin: 20px 0px 0px 0px;
+  }
+  .card__professional {
+    margin: 20px 0px 0px 0px;
+    padding: 25px 0px 25px 0px;
+  }
+  .card__value__currency h2 {
+    font-size: 4.8rem;
+  }
+  .learnmore__professional {
+    margin: 0 auto;
+  }
+}
+
+/* For Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    background-size: 30% 50%, 30% 10%;
+  }
+  main {
+    width: 85%;
+  }
+  .pricing {
+    font-size: 1.9rem;
+  }
+  .action__content {
+    margin-top: 20px;
+  }
+  .action__content h3 {
+    font-size: 1.2rem;
+    margin: 0px 18px 0px 18px;
+  }
+  .card_container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+  .card__basic,
+  .card__master,
+  .card__professional {
+    width: 100%;
+  }
+  .card__basic,
+  .card__master {
+    margin: 30px 0px 0px 0px;
+    padding: 20px 0px 30px 0px;
+  }
+  .card__professional {
+    margin: 30px 0px 0px 0px;
+    padding: 25px 0px 35px 0px;
+  }
+  .card__professional h4 {
+    margin: 20px 0px 20px 0px;
+  }
+  .card__value__currency h2 {
+    font-size: 5rem;
+  }
+  .learnmore__professional {
+    margin: 0 auto;
+  }
+}
+
+/* For Small Resolution Laptops
+ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    width: 85%;
+  }
+  .card__value__currency h2 {
+    font-size: 4rem;
+  }
+  .action__content h3 {
+    font-size: 1rem;
+  }
+}
+/* Code Freeze!
+Future Plans: Lot of Improvements to make in this project! */

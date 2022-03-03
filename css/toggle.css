@@ -1,0 +1,44 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 30px;
+}
+.switch:hover {
+  background: hsl(236, 72%, 79%);
+  opacity: 0.9;
+}
+input {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  transform: translateX(30px);
+}
+input:checked + .slider:before {
+  transform: translateX(0);
+}
+/* Toggle Button Finished */
